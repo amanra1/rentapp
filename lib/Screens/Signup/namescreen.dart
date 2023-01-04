@@ -1,9 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_gif/flutter_gif.dart';
 import 'package:rentapp/Screens/loginscreen.dart';
-import 'package:rentapp/library/imageviewer.dart';
 
 class NameScreen extends StatefulWidget {
   const NameScreen({super.key});
