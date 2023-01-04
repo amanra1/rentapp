@@ -2,6 +2,7 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:rentapp/Screens/Signup/namescreen.dart';
 import 'package:rentapp/library/imageviewer.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -15,6 +16,21 @@ class _LoginScreenState extends State<LoginScreen> {
   bool isVisible = true;
   bool visible = false;
   bool _isVisible = true;
+
+  AssetImage? image;
+
+  @override
+  void initState() {
+    image = AssetImage('assets/gif/login.gif');
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    image!.evict();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,8 +40,8 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CommonImageView(
-                imagePath: 'assets/gif/login.gif',
+              Image(
+                image: image as ImageProvider,
                 height: MediaQuery.of(context).size.height * (0.5),
                 width: MediaQuery.of(context).size.width,
               ),
@@ -161,10 +177,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: TextStyle(color: Colors.black, fontSize: 20),
                     children: <TextSpan>[
                       TextSpan(
-                          text: ' Sign up',
-                          style:
-                              TextStyle(color: Colors.deepPurple, fontSize: 20),
-                          recognizer: TapGestureRecognizer()..onTap = () {})
+                        text: ' Sign up',
+                        style:
+                            TextStyle(color: Colors.deepPurple, fontSize: 20),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => NameScreen(),
+                              ),
+                            );
+                          },
+                      ),
                     ],
                   ),
                 ),
