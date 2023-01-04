@@ -1,17 +1,18 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:rentapp/Screens/Signup/emailscreen.dart';
+import 'package:rentapp/Screens/Signup/emailverification.dart';
 import 'package:rentapp/Screens/loginscreen.dart';
 
-class NameScreen extends StatefulWidget {
-  const NameScreen({super.key});
+class PasswordScreen extends StatefulWidget {
+  const PasswordScreen({super.key});
 
   @override
-  State<NameScreen> createState() => _NameScreenState();
+  State<PasswordScreen> createState() => _PasswordScreenState();
 }
 
-class _NameScreenState extends State<NameScreen> {
+class _PasswordScreenState extends State<PasswordScreen> {
+  bool _isVisible = true;
   AssetImage? image;
 
   @override
@@ -67,9 +68,26 @@ class _NameScreenState extends State<NameScreen> {
                   height: 20,
                 ),
                 TextFormField(
-                  style: TextStyle(color: Colors.black, fontSize: 18),
+                  obscureText: !_isVisible,
+                  style: TextStyle(color: Colors.black, fontSize: 20),
                   decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.person),
+                      prefixIcon: Icon(Icons.password_rounded),
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            _isVisible = !_isVisible;
+                          });
+                        },
+                        icon: _isVisible
+                            ? Icon(
+                                Icons.visibility,
+                                color: Colors.grey.shade500,
+                              )
+                            : Icon(
+                                Icons.visibility_off,
+                                color: Colors.grey.shade500,
+                              ),
+                      ),
                       filled: true,
                       fillColor: Colors.grey.shade200,
                       contentPadding: EdgeInsets.only(right: 20, left: 20),
@@ -78,24 +96,7 @@ class _NameScreenState extends State<NameScreen> {
                           borderSide: BorderSide.none),
                       hintStyle:
                           TextStyle(fontSize: 16, color: Colors.grey.shade700),
-                      hintText: "First Name"),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                TextFormField(
-                  style: TextStyle(color: Colors.black, fontSize: 18),
-                  decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.person),
-                      filled: true,
-                      fillColor: Colors.grey.shade200,
-                      contentPadding: EdgeInsets.only(right: 20, left: 20),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide.none),
-                      hintStyle:
-                          TextStyle(fontSize: 16, color: Colors.grey.shade700),
-                      hintText: "Last Name"),
+                      hintText: "Password"),
                 ),
                 SizedBox(
                   height: 20,
@@ -117,8 +118,12 @@ class _NameScreenState extends State<NameScreen> {
                       textStyle:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
-                    onPressed: () => Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => EmailScreen())),
+                    onPressed: () => Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => EmailVerificationPage(),
+                      ),
+                    ),
                     icon: Icon(
                       Icons.arrow_forward_ios_rounded,
                       color: Colors.white,
