@@ -1,17 +1,17 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:rentapp/Screens/Signup/emailscreen.dart';
+import 'package:rentapp/Screens/Signup/passwordscreen.dart';
 import 'package:rentapp/Screens/loginscreen.dart';
 
-class NameScreen extends StatefulWidget {
-  const NameScreen({super.key});
+class EmailScreen extends StatefulWidget {
+  const EmailScreen({super.key});
 
   @override
-  State<NameScreen> createState() => _NameScreenState();
+  State<EmailScreen> createState() => _EmailScreenState();
 }
 
-class _NameScreenState extends State<NameScreen> {
+class _EmailScreenState extends State<EmailScreen> {
   AssetImage? image;
 
   @override
@@ -69,7 +69,7 @@ class _NameScreenState extends State<NameScreen> {
                 TextFormField(
                   style: TextStyle(color: Colors.black, fontSize: 18),
                   decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.person),
+                      prefixIcon: Icon(Icons.email),
                       filled: true,
                       fillColor: Colors.grey.shade200,
                       contentPadding: EdgeInsets.only(right: 20, left: 20),
@@ -78,24 +78,7 @@ class _NameScreenState extends State<NameScreen> {
                           borderSide: BorderSide.none),
                       hintStyle:
                           TextStyle(fontSize: 16, color: Colors.grey.shade700),
-                      hintText: "First Name"),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                TextFormField(
-                  style: TextStyle(color: Colors.black, fontSize: 18),
-                  decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.person),
-                      filled: true,
-                      fillColor: Colors.grey.shade200,
-                      contentPadding: EdgeInsets.only(right: 20, left: 20),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide.none),
-                      hintStyle:
-                          TextStyle(fontSize: 16, color: Colors.grey.shade700),
-                      hintText: "Last Name"),
+                      hintText: "Email-address"),
                 ),
                 SizedBox(
                   height: 20,
@@ -117,8 +100,12 @@ class _NameScreenState extends State<NameScreen> {
                       textStyle:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
-                    onPressed: () => Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => EmailScreen())),
+                    onPressed: () => Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PasswordScreen(),
+                      ),
+                    ),
                     icon: Icon(
                       Icons.arrow_forward_ios_rounded,
                       color: Colors.white,
