@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
             snap: false,
             centerTitle: true,
             title: Text(
-              'Rent Monk',
+              'Rent',
               style: TextStyle(
                   fontFamily: 'IndieFlower',
                   fontSize: 30,
