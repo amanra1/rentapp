@@ -165,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: TextStyle(color: Colors.black, fontSize: 20),
                     children: <TextSpan>[
                       TextSpan(
-                        text: ' Password ?',
+                        text: ' Password?',
                         style:
                             TextStyle(color: Colors.deepPurple, fontSize: 20),
                         recognizer: TapGestureRecognizer()..onTap = () {},
