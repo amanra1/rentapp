@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, prefer_const_constructors, unnecessary_nullable_for_final_variable_declarations, sized_box_for_whitespace, duplicate_ignore, avoid_unnecessary_containers
+// ignore_for_file: file_names, prefer_const_constructors, unnecessary_nullable_for_final_variable_declarations, sized_box_for_whitespace, duplicate_ignore, avoid_unnecessary_containers, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 
