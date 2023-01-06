@@ -176,12 +176,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: TextFormField(
                     readOnly: true,
                     onTap: () {},
-                    // ignore: prefer_const_constructors
                     style: TextStyle(color: Colors.black, fontSize: 18),
                     decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
-                        // ignore: prefer_const_constructors
                         contentPadding: EdgeInsets.all(0),
                         prefixIcon: Icon(
                           Icons.search_rounded,
@@ -225,8 +223,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     shrinkWrap: true,
                     children: [
                       Padding(
-                          padding: EdgeInsets.only(
-                              bottom: 20.0), //or use bottom only,
+                          padding: EdgeInsets.only(bottom: 20.0),
                           child: Card(
                             elevation: 5,
                             shape: RoundedRectangleBorder(
@@ -296,26 +293,23 @@ class _HomeScreenState extends State<HomeScreen> {
                                   alignment: MainAxisAlignment.spaceAround,
                                   children: [
                                     TextButton.icon(
-                                      icon: Icon(
-                                          Icons.currency_bitcoin), //icon image
-                                      label: Text('1'), //text to show in button
+                                      icon: Icon(Icons.currency_bitcoin),
+                                      label: Text('1'),
                                       style: ButtonStyle(
                                         foregroundColor:
                                             MaterialStatePropertyAll<Color>(
                                                 Colors.black),
-                                      ), //button text and icon color.
+                                      ),
                                       onPressed: () {},
                                     ),
                                     TextButton.icon(
-                                      icon: Icon(Icons
-                                          .date_range_rounded), //icon image
-                                      label: Text(
-                                          'Available for 10 days'), //text to show in button
+                                      icon: Icon(Icons.date_range_rounded),
+                                      label: Text('Available for 10 days'),
                                       style: ButtonStyle(
                                         foregroundColor:
                                             MaterialStatePropertyAll<Color>(
                                                 Colors.black),
-                                      ), //button text and icon color.
+                                      ),
                                       onPressed: () {},
                                     ),
                                   ],
@@ -388,7 +382,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget bottom() {
     return Container(
       child: SingleChildScrollView(
-        // ignore: avoid_unnecessary_containers
         child: ListView(
             physics: const ClampingScrollPhysics(
               parent: BouncingScrollPhysics(),
@@ -402,8 +395,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 10,
                   ),
                   imagebottomsheet(),
-
-                  // ignore: avoid_unnecessary_containers
                   Container(
                     child: Card(
                       margin: EdgeInsets.only(
@@ -413,7 +404,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
-                        // ignore: prefer_const_literals_to_create_immutables
                         children: <Widget>[
                           GestureDetector(
                               onTap: () {},
@@ -439,7 +429,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       thickness: 2,
                     ),
                   ),
-                  // ignore: avoid_unnecessary_containers
                   Container(
                     child: Card(
                       margin: EdgeInsets.only(
@@ -449,7 +438,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
-                        // ignore: prefer_const_literals_to_create_immutables
                         children: <Widget>[
                           GestureDetector(
                             onTap: () {},
@@ -469,7 +457,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-
                   Container(
                     margin: EdgeInsets.only(left: 50, right: 50),
                     child: Divider(
@@ -477,8 +464,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       thickness: 2,
                     ),
                   ),
-
-                  // ignore: avoid_unnecessary_containers
                   Container(
                     child: Card(
                       margin: EdgeInsets.only(
@@ -488,7 +473,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
-                        // ignore: prefer_const_literals_to_create_immutables
                         children: <Widget>[
                           GestureDetector(
                             onTap: () {},
@@ -515,7 +499,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       thickness: 2,
                     ),
                   ),
-                  // ignore: avoid_unnecessary_containers, sized_box_for_whitespace
                   Container(
                     child: Card(
                       margin: EdgeInsets.only(right: 20, left: 20, bottom: 0),
@@ -524,7 +507,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
-                        // ignore: prefer_const_literals_to_create_immutables
                         children: <Widget>[
                           GestureDetector(
                             onTap: () {},
@@ -551,7 +533,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       thickness: 2,
                     ),
                   ),
-                  // ignore: avoid_unnecessary_containers
                   Container(
                     child: Card(
                       margin: EdgeInsets.only(right: 20, left: 20),
@@ -560,7 +541,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
-                        // ignore: prefer_const_literals_to_create_immutables
                         children: <Widget>[
                           GestureDetector(
                             onTap: () async {},
