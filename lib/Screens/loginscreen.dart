@@ -3,7 +3,7 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:rentapp/Screens/Signup/namescreen.dart';
-import 'package:rentapp/Screens/homeScreen.dart';
+import 'package:rentapp/Screens/homescreen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
