@@ -45,6 +45,31 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: MediaQuery.of(context).size.height * (0.5),
                 width: MediaQuery.of(context).size.width,
               ),
+            ],
+          ),
+        ),
+      ),
+      bottomSheet: Container(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.2),
+              spreadRadius: 5,
+              blurRadius: 7,
+              offset: Offset(0, 3), // changes position of shadow
+            ),
+          ],
+          color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(20)),
+        ),
+        height: MediaQuery.of(context).size.height * (0.57),
+        child: Container(
+          margin: EdgeInsets.only(top: 20, left: 20, right: 20),
+          child: ListView(
+            padding: EdgeInsets.zero,
+            physics: BouncingScrollPhysics(),
+            shrinkWrap: true,
+            children: [
               Text(
                 'Login',
                 style: TextStyle(
