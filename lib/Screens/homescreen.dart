@@ -1,6 +1,8 @@
 // ignore_for_file: file_names, prefer_const_constructors, unnecessary_nullable_for_final_variable_declarations, sized_box_for_whitespace, duplicate_ignore, avoid_unnecessary_containers, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:rentapp/Screens/loginscreen.dart';
+import 'package:rentapp/Screens/profilescreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -221,6 +223,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     scrollDirection: Axis.vertical,
                     shrinkWrap: true,
+                    padding: EdgeInsets.zero,
                     children: [
                       Padding(
                           padding: EdgeInsets.only(bottom: 20.0),
@@ -406,7 +409,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Column(
                         children: <Widget>[
                           GestureDetector(
-                              onTap: () {},
+                              onTap: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ProfileScreen())),
                               child: ListTile(
                                 leading: Icon(
                                   Icons.person_rounded,
@@ -543,7 +549,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Column(
                         children: <Widget>[
                           GestureDetector(
-                            onTap: () async {},
+                            onTap: () => Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => LoginScreen())),
                             child: ListTile(
                               leading: Icon(
                                 Icons.logout_rounded,
@@ -559,6 +568,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
+                  ),
+                  SizedBox(
+                    height: 20,
                   ),
                 ],
               )
